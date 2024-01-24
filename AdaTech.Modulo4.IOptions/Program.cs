@@ -37,12 +37,14 @@ namespace AdaTech.Modulo4.IOptions
                 var name = args.Length > 1 ? args[1] : "usuário";
                 var greetings = app.Services.GetRequiredService<IOptions<GreetingOptions>>().Value;
 
-                string greeting = command switch
+                string message = command switch
                 {
-                    "saudacao" => greetings.Greeting,
-                    "despedida" => greetings.Farewell,
+                    "saudacao" => $"{greetings.Greeting}{name}",
+                    "despedida" => $"{greetings.Farewell}{name}",
                     _ => "O programa será encerrado"
                 };
+
+                Console.WriteLine(message);
             }
 
             app.Run();

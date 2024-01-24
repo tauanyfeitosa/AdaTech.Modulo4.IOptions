@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Options;
-using AdaTech.Modulo4.IOptions.Options; // Assumindo que GreetingOptions está dentro do namespace Options
+using AdaTech.Modulo4.IOptions.Options; 
 
 namespace AdaTech.Modulo4.IOptions.Services
 {
@@ -22,3 +22,4 @@ namespace AdaTech.Modulo4.IOptions.Services
             return $"{_options.Value.Farewell}{name}";
         }
     }
+}
