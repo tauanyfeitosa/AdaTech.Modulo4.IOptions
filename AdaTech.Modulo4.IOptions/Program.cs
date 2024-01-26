@@ -1,6 +1,7 @@
 using Microsoft.Extensions.Options;
 using AdaTech.Modulo4.IOptions;
 using AdaTech.Modulo4.IOptions.Services;
+using AdaTech.Modulo4.IOptions.Options;
 
 namespace AdaTech.Modulo4.IOptions
 {
@@ -49,11 +50,5 @@ namespace AdaTech.Modulo4.IOptions
 
             app.Run();
         }
-    }
-
-    public class GreetingOptions
-    {
-        public string Greeting { get; set; }
-        public string Farewell { get; set; }
     }
 }
